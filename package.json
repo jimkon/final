@@ -5,8 +5,11 @@
   "main": "server/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"start": "server/app.js"
+	"start": "node server/app.js"
   },
+   "engines": {  
+        "node": "6.3.0"  
+    } , 
   "author": "",
   "license": "ISC",
   "dependencies": {
