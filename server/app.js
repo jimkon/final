@@ -39,7 +39,10 @@ app.use(flash());
 
 app.use('/api', router);
 
-app.use('/public', express.static('./client'));
+app.use(express.static(__dirname + '/../client'));
+app.use(express.static(__dirname + '/../node_modules'));
+
+console.log(__dirname);
 
 app.get('/auth', (req, res) => {
     res.sendFile('index.html', {root: __dirname + '/../client/auth'});

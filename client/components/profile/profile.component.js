@@ -4,7 +4,7 @@
 angular
     .module('profile', [])
     .component('profile', {
-        templateUrl: "public/components/profile/profile.template.html",
+        templateUrl: "components/profile/profile.template.html",
         controller: ['$http', '$window', function ProfileController($http, $window){
             let self = this;
             self.profile = {

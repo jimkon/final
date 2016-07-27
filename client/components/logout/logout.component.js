@@ -4,7 +4,7 @@
 angular
     .module('logout', [])
     .component('logout', {
-        templateUrl: "public/components/logout/logout.template.html",
+        templateUrl: "components/logout/logout.template.html",
         controller: ['$window', '$http', function ProfileController($window, $http){
             let self = this;
 

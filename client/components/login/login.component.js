@@ -5,7 +5,7 @@
 angular
     .module('login', [])
     .component('login', {
-        templateUrl: "public/components/login/login.template.html",
+        templateUrl: "components/login/login.template.html",
         controller: ['$http', '$window', function LoginController($http, $window){
             const self = this;
 

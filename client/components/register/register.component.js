@@ -4,7 +4,7 @@
 angular
     .module('register', [])
     .component('register', {
-        templateUrl: "public/components/register/register.template.html",
+        templateUrl: "components/register/register.template.html",
         controller: ['$http', '$window', function RegisterController($http, $window) {
             const self = this;
 

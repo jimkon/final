@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <script src="./public/node_modules/angular/angular.min.js"></script>
-    <script src="./public/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="./public/node_modules/angular-animate/angular-animate.min.js"></script>
-    <script src="./public/node_modules/angular-aria/angular-aria.min.js"></script>
-    <script src="./public/node_modules/angular-material/angular-material.min.js"></script>
-
-
-    <script src="./public/components/login/login.component.js"></script>
-    <script src="./public/components/register/register.component.js"></script>
+    <base href="/">
+    <script type="text/javascript" src="angular/angular.min.js"></script>
+    <script type="text/javascript" src="angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="angular-animate/angular-animate.min.js"></script>
+    <script type="text/javascript" src="angular-aria/angular-aria.min.js"></script>
+    <script type="text/javascript" src="angular-material/angular-material.min.js"></script>
 
 
-    <script src="./public/pre_auth/index.js"></script>
+    <script type="text/javascript" src="components/login/login.component.js"></script>
+    <script type="text/javascript" src="components/register/register.component.js"></script>
+	
+
+	<script type="text/javascript" src="pre_auth/index.js"></script>
+	
+	
+    
     <meta charset="UTF-8">
     <title>index</title>
 </head>
@@ -21,7 +24,6 @@
 <h1>Home</h1>
 <a ui-sref="login">Login</a>
 <a ui-sref="register">Register</a>
-
 <div ui-view></div>
 </body>
 

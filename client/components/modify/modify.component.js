@@ -4,7 +4,7 @@
 angular
     .module('modify', [])
     .component('modify', {
-        templateUrl: "public/components/modify/modify.template.html",
+        templateUrl: "components/modify/modify.template.html",
         controller: ['$http', '$window', function ModifyController($http, $window){
             let self = this;
             self.profile = {
