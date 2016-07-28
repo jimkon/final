@@ -2,7 +2,7 @@
  * Created by Jim on 7/12/2016.
  */
 angular
-    .module('authApp', [ 'profile', 'logout', 'modify', 'ui.router', 'pascalprecht.translate'])
+    .module('authApp', [ 'profile', 'logout', 'modify', 'ui.router', 'pascalprecht.translate', 'ngCookies'])
     .controller('Ctrl', ['$translate', '$scope', function ($translate, $scope) {
 
         $scope.changeLanguage = function (langKey) {
