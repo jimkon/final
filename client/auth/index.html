@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="authApp">
 <head>
     <base href="/">
     <script type="text/javascript" src="angular/angular.min.js"></script>
     <script type="text/javascript" src="angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="angular-translate/dist/angular-translate.min.js"></script>
+    <script type="text/javascript" src="angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+
 
     <script type="text/javascript" src="components/profile/profile.component.js"></script>
     <script type="text/javascript" src="components/modify/modify.component.js"></script>
@@ -14,12 +17,14 @@
 	
 	
     <meta charset="UTF-8">
-    <title>index</title>
+    <title>{{"TITLE"|translate}}</title>
 </head>
-<body ng-app="authApp">
-<h1>User</h1>
-<a ui-sref="modify">Modify</a>
-<a ui-sref="logout">Logout</a>
+<body ng-controller="Ctrl">
+<button ng-click="changeLanguage('en')">{{"EN_BUTTON"|translate}}</button>
+<button ng-click="changeLanguage('gr')">{{"GR_BUTTON"|translate}}</button>
+<h1>{{"USER_LABEL"|translate}}</h1>
+<a ui-sref="modify">{{"MODIFY_LINK"|translate}}</a>
+<a ui-sref="logout">{{"LOGOUT_LINK"|translate}}</a>
 <div ui-view></div>
 </body>
 </html>

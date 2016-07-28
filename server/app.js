@@ -41,6 +41,7 @@ app.use('/api', router);
 
 app.use(express.static(__dirname + '/../client'));
 app.use(express.static(__dirname + '/../node_modules'));
+app.use(express.static(__dirname + '/../lang'));
 
 console.log(__dirname);
 

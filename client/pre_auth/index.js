@@ -2,10 +2,22 @@
  * Created by Jim on 7/6/2016.
  */
 angular
-    .module( 'preAuthApp', ['login', 'register', 'ui.router', 'ngMaterial' ])
-    .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
-        //
-        // For any unmatched url, redirect to /state1
+    .module( 'preAuthApp', ['login', 'register', 'ui.router', 'pascalprecht.translate'])
+    .controller('Ctrl', ['$translate', '$scope', function ($translate, $scope) {
+
+        $scope.changeLanguage = function (langKey) {
+            $translate.use(langKey);
+        };
+
+    }])
+    .config( function( $stateProvider, $urlRouterProvider, $locationProvider, $translateProvider) {
+
+        $translateProvider.useStaticFilesLoader({
+            prefix: "lang/lang-",
+            suffix: ".json"
+        });
+        $translateProvider.preferredLanguage('en');
+
         $urlRouterProvider.otherwise("/login");
 		$locationProvider.html5Mode(true);
         //

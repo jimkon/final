@@ -2,8 +2,22 @@
  * Created by Jim on 7/12/2016.
  */
 angular
-    .module('authApp', [ 'profile', 'logout', 'modify', 'ui.router'])
-    .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+    .module('authApp', [ 'profile', 'logout', 'modify', 'ui.router', 'pascalprecht.translate'])
+    .controller('Ctrl', ['$translate', '$scope', function ($translate, $scope) {
+
+        $scope.changeLanguage = function (langKey) {
+            $translate.use(langKey);
+        };
+
+    }])
+    .config(function($stateProvider, $urlRouterProvider, $locationProvider, $translateProvider) {
+
+        $translateProvider.useStaticFilesLoader({
+            prefix: "lang/lang-",
+            suffix: ".json"
+        });
+        $translateProvider.preferredLanguage('en');
+
         $urlRouterProvider.otherwise("profile");
 		$locationProvider.html5Mode(true);
         //
