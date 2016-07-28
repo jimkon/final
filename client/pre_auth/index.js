@@ -2,7 +2,7 @@
  * Created by Jim on 7/6/2016.
  */
 angular
-    .module( 'preAuthApp', ['login', 'register', 'ui.router', 'pascalprecht.translate'])
+    .module( 'preAuthApp', ['login', 'register', 'ui.router', 'pascalprecht.translate', 'ngCookies'])
     .controller('Ctrl', ['$translate', '$scope', function ($translate, $scope) {
 
         $scope.changeLanguage = function (langKey) {
@@ -17,6 +17,7 @@ angular
             suffix: ".json"
         });
         $translateProvider.preferredLanguage('en');
+        $translateProvider.useLocalStorage();
 
         $urlRouterProvider.otherwise("/login");
 		$locationProvider.html5Mode(true);

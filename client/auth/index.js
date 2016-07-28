@@ -17,6 +17,7 @@ angular
             suffix: ".json"
         });
         $translateProvider.preferredLanguage('en');
+        $translateProvider.useLocalStorage();
 
         $urlRouterProvider.otherwise("profile");
 		$locationProvider.html5Mode(true);

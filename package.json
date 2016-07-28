@@ -29,10 +29,10 @@
     "angular-material": "^1.1.0-rc.5",
     "angular-resource": "^1.5.7",
     "angular-route": "^1.5.7",
-    "angular-ui-router": "^1.0.0-alpha.3"
+    "angular-ui-router": "^1.0.0-alpha.3",
+    "angular-cookie": "^4.1.0"
   },
   "devDependencies": {
-    "angular-translate": "^2.11.1",
-    "angular-translate-loader-static-files": "^2.11.1"
+    "angular-translate": "^2.11.1"
   }
 }
